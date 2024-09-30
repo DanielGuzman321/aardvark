@@ -23,6 +23,84 @@ h3 {
   font-size: 60px;
 }
 
+/* Ajustes específicos para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+  h1 {
+      font-size: 8vw; /* Aumentar el tamaño en pantallas pequeñas */
+  }
+
+  h2 {
+      font-size: 6vw; /* Aumentar el tamaño en pantallas pequeñas */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+      font-size: 15vw; /* Aumentar aún más el tamaño en pantallas muy pequeñas */
+  }
+
+  h2 {
+      font-size: 10vw; /* Aumentar aún más el tamaño en pantallas muy pequeñas */
+  }
+}
+
+.animation-container {
+  position: relative;
+  width: 100%; /* Contenedor ocupa todo el ancho */
+  height: auto; /* Ajuste automático de altura según contenido */
+  overflow: hidden; /* Evita que las imágenes se salgan del contenedor */
+  display: flex; /* Usar flexbox para alinear las imágenes */
+  justify-content: center; /* Centra las imágenes dentro del contenedor */
+}
+
+.image {
+  width: 150px; /* Establece un tamaño fijo para las imágenes */
+  height: auto; /* Mantiene la proporción original de la imagen */
+  margin-right: 10px; /* Espacio entre imágenes */
+  display: inline-block; /* Alinea las imágenes horizontalmente */
+}
+
+/* Opcional: Aumentar tamaño en pantallas más grandes */
+@media only screen and (min-width: 768px) {
+  .image {
+      width: 200px; 
+  }
+}
+
+/* Opcional: Ajustar tamaño en pantallas pequeñas */
+@media only screen and (max-width: 480px) {
+  .image {
+      width: 120px; 
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h3 {
+      font-size: 1.5rem; /* Tamaño más pequeño para pantallas pequeñas */
+  }
+
+  .flex-container img {
+      width: 100%; /* Hacer la imagen responsiva */
+      height: auto; /* Mantener la proporción de la imagen */
+  }
+}
+
+/* Si deseas que el texto en la segunda sección sea un poco más pequeño */
+.text-left h3 {
+  font-size: 1.8rem; /* Tamaño específico para esta sección */
+}
+
+.bihind {
+  font-size: 2rem; /* Tamaño base para el texto en la tercera sección */
+}
+
+/* Más ajustes para la sección de misión en pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+  .bihind {
+      font-size: 1.5rem; /* Tamaño más pequeño para pantallas pequeñas */
+  }
+}
+
 h4 {
   margin: 20px 0;
   font-family: 'Boogaloo', cursive;
@@ -126,6 +204,8 @@ body {
   box-sizing: border-box;
 }
 
+
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -150,6 +230,26 @@ body {
   border: none;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 768px) {
+  /* Ocultar enlaces específicos */
+  .footer p:nth-of-type(2), /* Dexscreener */
+  .footer p:nth-of-type(3), /* Correo electrónico */
+  .footer p:nth-of-type(4)  /* Dirección de wallet */ {
+      display: none;
+  }
+
+  /* Ocultar imágenes con clase 'shake-image' */
+  .footer .shake-image {
+      display: none;
+  }
+
+  /* Ocultar icono de control de audio */
+  .footer i.audio-control {
+      display: none;
+  }
+}
+
 
 @keyframes shake {
 

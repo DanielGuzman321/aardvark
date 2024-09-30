@@ -34,18 +34,17 @@ function copyText(text) {
 // Contenido de scripts.js
 
 function showBurnedImage() {
-    var burnedImage = document.getElementById('burnedImage');
+        var burnedImage = document.getElementById('burnedImage');
 
-    // Muestra la imagen
-    burnedImage.style.display = 'block';
+        // Muestra la imagen
+        burnedImage.style.display = 'block';
 
-    // Agita la imagen
-    burnedImage.classList.add('shake');
+        // Agita la imagen
+        burnedImage.classList.add('shake');
 
-    // Oculta la imagen después de un tiempo (puedes ajustar el tiempo según tus preferencias)
-    setTimeout(function () {
-        burnedImage.style.display = 'none';
-        burnedImage.classList.remove('shake');
-    }, 2000); // 2000 milisegundos = 2 segundos
-}
-
+        // Oculta la imagen después de un tiempo
+        setTimeout(function () {
+            burnedImage.style.display = 'none';
+            burnedImage.classList.remove('shake');
+        }, 2000); // 2000 milisegundos = 2 segundos
+    }

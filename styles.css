@@ -1,0 +1,311 @@
+body {
+  background-color: #ff15d6;
+  color: #f3fd04;
+  text-align: center;
+  font-family: 'Boogaloo', cursive;
+}
+
+h1 {
+  margin: 20px 0;
+  font-family: 'Boogaloo', cursive;
+  font-size: 100px;
+}
+
+h2 {
+  margin: 20px 0;
+  font-family: 'Boogaloo', cursive;
+  font-size: 80px;
+}
+
+h3 {
+  margin: 20px 0;
+  font-family: 'Boogaloo', cursive;
+  font-size: 60px;
+}
+
+/* Ajustes específicos para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+  h1 {
+      font-size: 8vw; /* Aumentar el tamaño en pantallas pequeñas */
+  }
+
+  h2 {
+      font-size: 6vw; /* Aumentar el tamaño en pantallas pequeñas */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+      font-size: 15vw; /* Aumentar aún más el tamaño en pantallas muy pequeñas */
+  }
+
+  h2 {
+      font-size: 10vw; /* Aumentar aún más el tamaño en pantallas muy pequeñas */
+  }
+}
+
+.animation-container {
+  position: relative;
+  width: 100%; /* Contenedor ocupa todo el ancho */
+  height: auto; /* Ajuste automático de altura según contenido */
+  overflow: hidden; /* Evita que las imágenes se salgan del contenedor */
+  display: flex; /* Usar flexbox para alinear las imágenes */
+  justify-content: center; /* Centra las imágenes dentro del contenedor */
+}
+
+.image {
+  width: 150px; /* Establece un tamaño fijo para las imágenes */
+  height: auto; /* Mantiene la proporción original de la imagen */
+  margin-right: 10px; /* Espacio entre imágenes */
+  display: inline-block; /* Alinea las imágenes horizontalmente */
+}
+
+/* Opcional: Aumentar tamaño en pantallas más grandes */
+@media only screen and (min-width: 768px) {
+  .image {
+      width: 200px; 
+  }
+}
+
+/* Opcional: Ajustar tamaño en pantallas pequeñas */
+@media only screen and (max-width: 480px) {
+  .image {
+      width: 120px; 
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h3 {
+      font-size: 1.5rem; /* Tamaño más pequeño para pantallas pequeñas */
+  }
+
+  .flex-container img {
+      width: 100%; /* Hacer la imagen responsiva */
+      height: auto; /* Mantener la proporción de la imagen */
+  }
+}
+
+/* Si deseas que el texto en la segunda sección sea un poco más pequeño */
+.text-left h3 {
+  font-size: 1.8rem; /* Tamaño específico para esta sección */
+}
+
+.bihind {
+  font-size: 2rem; /* Tamaño base para el texto en la tercera sección */
+}
+
+/* Más ajustes para la sección de misión en pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+  .bihind {
+      font-size: 1.5rem; /* Tamaño más pequeño para pantallas pequeñas */
+  }
+}
+
+h4 {
+  margin: 20px 0;
+  font-family: 'Boogaloo', cursive;
+  font-size: 40px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Boogaloo', cursive;
+  color: #f3fd04;
+}
+
+p {
+  font-family: 'Boogaloo', cursive;
+  font-size: 30px;
+}
+
+a {
+  font-family: 'Boogaloo', cursive;
+  font-size: 60px;
+  animation: changeColor 0.6s infinite;
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(2500%);
+  }
+
+  100% {
+    transform: translateX(-2500%);
+  }
+}
+
+.animation-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image {
+  width: 4%;
+  height: auto;
+  margin-right: 100px; /* Ajusta este valor según tu preferencia para el espacio entre las imágenes */
+  animation: moveRightToLeft 3s linear infinite;
+}
+
+
+/* #videoContainer {
+  max-width: 60%; 
+  margin: 0 auto;
+  text-align: center; 
+}
+
+#video {
+  width: 100%;
+  max-width: 100%; 
+  height: auto;
+  display: inline-block; 
+  object-fit: cover; 
+} */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ff15d6;
+  color: #f3fd04;
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 0px;
+}
+
+.slider-container {
+  margin-bottom: 150px;
+}
+
+.slider img {
+  flex: 0 0 calc(33.33% - 20px);
+  max-width: calc(33.33% - 0px);
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer a {
+  font-size: 25px;
+  color: #f3fd04;
+  text-decoration: none;
+}
+
+.footer button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Ocultar enlaces específicos */
+  .footer p:nth-of-type(2), /* Dexscreener */
+  .footer p:nth-of-type(3), /* Correo electrónico */
+  .footer p:nth-of-type(4)  /* Dirección de wallet */ {
+      display: none;
+  }
+
+  /* Ocultar imágenes con clase 'shake-image' */
+  .footer .shake-image {
+      display: none;
+  }
+
+  /* Ocultar icono de control de audio */
+  .footer i.audio-control {
+      display: none;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    color: red;
+  }
+
+  25% {
+    color: orange;
+  }
+
+  50% {
+    color: yellow;
+  }
+
+  75% {
+    color: green;
+  }
+
+  100% {
+    color: rgb(255, 0, 221);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+
+.burned-section a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  animation: changeColor 2s infinite;
+}
+
+.burned-section a:active {
+  color: inherit;
+}
+
+.shake-image {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 30%;
+  height: auto;
+  animation: shake 0.5s ease-in-out;
+}
+
+
+
